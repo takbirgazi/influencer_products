@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --main_color : #E02C6D;
+    --font_color : #3A3A3A;
+    --font_color_main : white;
+    --font_color_secnd : black;
+    
+}
+
+body{
+    font-family: Poppins;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header section CSS */
+.header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 15px 0px;
+}
+.nav> ul, nav {
+    display: flex;
+    gap: 10px;
+}
+.btn-btn-primary {
+    padding: 10px 20px;
+    border-radius: 41px;
+    background: var(--main_color);
+    border: none;
+    color: var(--font_color_main);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.main{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.hero_area{
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+}
+.hero_area .hro_cont{
+    width: 50%;
+}
+.hero_area .hro_cont h3{
+    color: var(--font_color);
+    font-size: 35px;
+}
+.hero_area .hro_cont p {
+    font-size: 16px;
+    color: var(--font_color);
+    margin: 20px 0px;
+}
+.hero_area .hero_img{
+    width: 50%;
+    background-image: url("../img/images/Circle\ design.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+}
+.cline_sec{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    padding: 30px 0px;
+}
+.cline_sec > img{
+    width: 55px;
+    height: 31px;
+}
+/* Products Section CSS  */
+.products_sec h3{
+    color: var(--font_color);
+    font-size: 28px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.prodecit_item_box{
+    display: grid;
+    gap: 35px;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px;
+}
+.prodecit_item_box .products_card {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    background: var(--font_color_main);
+    box-shadow: 0px 0px 4px 1px #d8dbef;
+}
+.prodecit_item_box .products_card h4{
+    margin: 15px 0px;
+}
+.bottom_sec{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin: 50px 0px;
+}
+.bottom_sec .bottom_sec_img{
+    width: 50%;
+}
+.bottom_sec .bottom_sec_cont{
+    width: 50%;
+}
+.bottom_sec .bottom_sec_cont h2 {
+    color: var(--font_color);
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.bottom_sec .bottom_sec_cont .bottom_button{
+    border-radius: 0px;
+    margin-top: 13px;
+}
+/* Footer are section css  */
+
+
+.footer {
+    background: #0A0826;
+    text-align: center;
+    color: white;
+    padding: 30px 0px;
+}
+.footer h4{
+    font-family: Poppins;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer p{
+    font-size: 12px;
+    line-height: 14px;
+}
+.footer .social i{
+    margin: 20px 10px 0px;
+}
+
+/* Responsive for mediam screen  */
+@media screen and (max-width: 992px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero_area{
+        flex-direction: column-reverse;
+    }
+    .hero_area .hero_img{
+        width: 100%;
+    }
+    .hero_area .hro_cont {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .cline_sec {
+        flex-wrap: wrap;
+    }
+    .prodecit_item_box {
+        grid-template-columns: 1fr;
+    }
+    .products_sec h3 {
+        font-size: 17px;
+    }
+    .bottom_sec {
+        flex-direction: column-reverse;
+        gap: 50px;
+        align-items: center;
+        margin: 50px 0px;
+    }
+    .bottom_sec .bottom_sec_img {
+        width: 100%;
+    }
+    .bottom_sec .bottom_sec_cont {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom_sec .bottom_sec_cont h2 {
+        font-size: 18px;
+    }
+
+
+}
